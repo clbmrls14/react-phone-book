@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 interface Props {
     onSearch(searchString: string): void;
-}
+};
 
 
 export const SearchBar = ({ onSearch }: Props) => {
@@ -25,4 +25,4 @@ export const SearchBar = ({ onSearch }: Props) => {
             />
         </div>
     );
-}
+};

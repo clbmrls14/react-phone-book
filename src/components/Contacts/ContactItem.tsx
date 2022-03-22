@@ -3,7 +3,8 @@ import React from "react";
 
 interface Props {
     contact: Contact;
-}
+};
+
 
 export const ContactItem = ({ contact }: Props) => {
     return (
@@ -11,5 +12,5 @@ export const ContactItem = ({ contact }: Props) => {
             <div><b>{contact.firstName} {contact.lastName}</b></div>
             <div>{contact.phoneNumber}</div>
         </div>
-    )
+    );
 };

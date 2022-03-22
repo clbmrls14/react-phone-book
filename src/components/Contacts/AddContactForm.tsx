@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
+
 interface Props {
     addContact(contact: Contact): void; 
-}
+};
+
 
 export const AddContactForm = ({ addContact }: Props) => {
     const [firstName, setFirstName] = useState('');
@@ -23,7 +25,6 @@ export const AddContactForm = ({ addContact }: Props) => {
         setLastName('');
         setPhoneNumber('');
     }
-
 
     return (
         <div>
