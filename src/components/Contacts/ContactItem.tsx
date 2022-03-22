@@ -1,10 +1,15 @@
 import React from "react";
 
 
-export const ContactItem = () => {
+interface Props {
+    contact: Contact;
+}
+
+export const ContactItem = ({ contact }: Props) => {
     return (
-        <div>
-            Contact Item
+        <div className="Contact-item">
+            <div><b>{contact.firstName} {contact.lastName}</b></div>
+            <div>{contact.phoneNumber}</div>
         </div>
     )
 };

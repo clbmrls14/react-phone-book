@@ -2,26 +2,50 @@
     width: 100%;
     overflow: auto;
     margin: 10;
+    display: flex;
 }
 
 .Box {
-    display: flex;
-    flex-flow: column;
     height: 100%;
     margin: 1em;
     padding: 1em;
 }
 
 .Add-contact-panel {
-    float: left;
+    flex: 1;
     width: 50%;
 }
 
 .Contact-list-panel {
-    float: right;
     width: 50%;
     border-style: solid;
     border-color: white;
     border-width: 2;
+    border-radius: 15px;
     height: 100%;
+}
+
+.Contact-item {
+    margin: 1em;
+    padding: 1em;
+    background-color: #191c24;
+    border-radius: 15px;
+}
+
+.Text-input {
+    margin: 1em;
+    padding: 0.5em;
+    font-size: calc(10px + 2vmin);
+    border-radius: 15px;
+    width: 80%;
+}
+
+.Input-label {
+    margin: 1em;
+}
+
+.Button {
+    margin: 1em;
+    padding: 0.5em;
+    font-size: calc(10px + 2vmin);
 }
