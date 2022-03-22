@@ -1,0 +1,27 @@
+.Home {
+    width: 100%;
+    overflow: auto;
+    margin: 10;
+}
+
+.Box {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    margin: 1em;
+    padding: 1em;
+}
+
+.Add-contact-panel {
+    float: left;
+    width: 50%;
+}
+
+.Contact-list-panel {
+    float: right;
+    width: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 2;
+    height: 100%;
+}
