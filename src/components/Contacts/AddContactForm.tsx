@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ConfirmationDialog } from "../General/ConfirmationDialog";
 
 
 interface Props {
@@ -10,21 +11,23 @@ export const AddContactForm = ({ addContact }: Props) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [dialogVisible, setDialogVisible] = useState(false);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        window.confirm(`Are you sure you want to add ${firstName} ${lastName} 
-            to your phone book?`);
+        setDialogVisible(true);
+    };
 
+    const confirmAddContact = () => {
         let newContact: Contact = {firstName, lastName, phoneNumber};
-
         addContact(newContact);
 
         setFirstName('');
         setLastName('');
         setPhoneNumber('');
-    }
+        setDialogVisible(false);
+    };
 
     return (
         <div>
@@ -70,6 +73,15 @@ export const AddContactForm = ({ addContact }: Props) => {
                     >
                         Add Contact
                     </button>
+                    <ConfirmationDialog 
+                        open={dialogVisible}
+                        title="Add Contact?"
+                        message={`Are you sure you want to add ${firstName} ${lastName}to your phone book?`}
+                        confirm="Add contact"
+                        cancel="Cancel"
+                        onConfirm={confirmAddContact}
+                        onCancel={() => setDialogVisible(false)}
+                    />
                 </div>
             </form>
         </div>
