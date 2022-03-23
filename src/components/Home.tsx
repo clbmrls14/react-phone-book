@@ -10,7 +10,7 @@ let initalState: Contact[] = [
     {firstName: "Caleb", lastName: "Morales", phoneNumber: "385-535-6712"},
     {firstName: "Poison", lastName: "Control", phoneNumber: "800-222-1222"},
     {firstName: "Owlet", lastName: "Care", phoneNumber: "855-746-5781"},
-]
+];
 
 
 export const Home = () => {
@@ -49,5 +49,5 @@ export const Home = () => {
                 <ContactList contacts={filteredContacts}/>
             </div>
         </div>
-    )
+    );
 };

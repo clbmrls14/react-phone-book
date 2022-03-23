@@ -4,7 +4,7 @@ import React, { useState } from "react";
 interface Props {
     onSearch(searchString: string): void;
     placeholder: string;
-}
+};
 
 
 export const SearchBar = ({ onSearch, placeholder }: Props) => {
@@ -26,4 +26,4 @@ export const SearchBar = ({ onSearch, placeholder }: Props) => {
             />
         </div>
     );
-}
+};

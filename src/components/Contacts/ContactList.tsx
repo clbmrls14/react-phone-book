@@ -1,12 +1,13 @@
 import React from "react";
 import { ContactItem } from "./ContactItem";
 
+
 interface Props {
     contacts: Contact[];
-}
+};
+
 
 export const ContactList = ({ contacts }: Props) => {
-
     return (
         <div className="Contact-list">
             {
@@ -16,4 +17,4 @@ export const ContactList = ({ contacts }: Props) => {
             }
         </div>
     );
-}
+};
