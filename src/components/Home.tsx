@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AddContactForm } from "./Contacts/AddContactForm";
 import { ContactList } from "./Contacts/ContactList";
-import { SearchBar } from "./Contacts/SearchBar";
+import { SearchBar } from "./General/SearchBar";
 
 import "./Home.css";
 
@@ -45,7 +45,7 @@ export const Home = () => {
             </div>
             <div className="Box Contact-list-panel">
                 <h1>Phone Book</h1>
-                <SearchBar onSearch={onSearch}/>
+                <SearchBar onSearch={onSearch} placeholder="Search contacts" />
                 <ContactList contacts={filteredContacts}/>
             </div>
         </div>

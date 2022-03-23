@@ -8,7 +8,7 @@ interface Props {
 export const ContactList = ({ contacts }: Props) => {
 
     return (
-        <div>
+        <div className="Contact-list">
             {
                 contacts.map((contact: Contact) => (
                     <ContactItem contact={contact} key={contact.phoneNumber}/>

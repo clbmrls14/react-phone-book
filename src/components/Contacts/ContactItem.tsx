@@ -8,7 +8,7 @@ interface Props {
 export const ContactItem = ({ contact }: Props) => {
     return (
         <div className="Contact-item">
-            <div><b>{contact.firstName} {contact.lastName}</b></div>
+            <div><strong>{contact.firstName} {contact.lastName}</strong></div>
             <div>{contact.phoneNumber}</div>
         </div>
     )
